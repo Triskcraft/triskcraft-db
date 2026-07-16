@@ -1,0 +1,51 @@
+{
+  "name": "@triskcraft/database",
+  "version": "0.1.0",
+  "description": "Schema, migrations and generated Prisma Client for Triskcraft services.",
+  "type": "module",
+  "packageManager": "pnpm@11.5.2",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "prisma"
+  ],
+  "scripts": {
+    "build": "prisma generate && tsc -p tsconfig.json",
+    "db:migrate:deploy": "prisma migrate deploy",
+    "format:check": "prettier --check .",
+    "prisma:generate": "prisma generate",
+    "verify": "pnpm run build && pnpm run format:check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Triskcraft/database.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Triskcraft/database/issues"
+  },
+  "homepage": "https://github.com/Triskcraft/database#readme",
+  "publishConfig": {
+    "access": "restricted",
+    "provenance": true
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "7.8.0",
+    "@prisma/client": "7.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "25.6.0",
+    "prettier": "3.8.3",
+    "prisma": "7.8.0",
+    "typescript": "7.0.2"
+  },
+  "engines": {
+    "node": ">=24.14"
+  }
+}

@@ -1,0 +1,8 @@
+packages:
+  - .
+
+saveExact: true
+
+allowBuilds:
+  '@prisma/engines': true
+  prisma: true
