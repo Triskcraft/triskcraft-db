@@ -1,5 +1,5 @@
 {
-  "name": "@triskcraft/database",
+  "name": "@triskcraft/db",
   "version": "0.1.0",
   "description": "Schema, migrations and generated Prisma Client for Triskcraft services.",
   "type": "module",
@@ -25,12 +25,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Triskcraft/database.git"
+    "url": "git+https://github.com/Triskcraft/triskcraft-db.git"
   },
   "bugs": {
-    "url": "https://github.com/Triskcraft/database/issues"
+    "url": "https://github.com/Triskcraft/triskcraft-db/issues"
   },
-  "homepage": "https://github.com/Triskcraft/database#readme",
+  "homepage": "https://github.com/Triskcraft/triskcraft-db#readme",
   "publishConfig": {
     "access": "restricted",
     "provenance": true
