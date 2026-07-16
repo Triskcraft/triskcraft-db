@@ -37,3 +37,9 @@ pnpm run db:migrate:deploy
 Run that step before deploying services that depend on the new schema version.
 For destructive changes, prefer progressive migrations so independently deployed
 bot and API versions can coexist temporarily.
+
+## Publishing
+
+Publish from the GitHub Actions workflow on `main`. Trusted Publisher provenance
+requires GitHub Actions OIDC, so local `npm publish --provenance` is expected to
+fail with `provider: null`.

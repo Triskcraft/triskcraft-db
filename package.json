@@ -32,8 +32,7 @@
   },
   "homepage": "https://github.com/Triskcraft/triskcraft-db#readme",
   "publishConfig": {
-    "access": "restricted",
-    "provenance": true
+    "access": "public"
   },
   "dependencies": {
     "@prisma/adapter-pg": "7.8.0",

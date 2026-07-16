@@ -53,4 +53,4 @@ jobs:
 
       - name: Publish to npm
         if: steps.published.outputs.exists == 'false'
-        run: pnpm publish --provenance --access restricted --no-git-checks
+        run: pnpm publish --provenance --access public --no-git-checks
