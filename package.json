@@ -18,7 +18,11 @@
   ],
   "scripts": {
     "build": "prisma generate && tsc -p tsconfig.json",
+    "db:format": "prisma format",
+    "db:migrate:dev": "prisma migrate dev",
     "db:migrate:deploy": "prisma migrate deploy",
+    "db:migrate:status": "prisma migrate status",
+    "db:validate": "prisma validate",
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
     "prisma:generate": "prisma generate",
