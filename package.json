@@ -1,9 +1,9 @@
 {
   "name": "@triskcraft/db",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Schema, migrations and generated Prisma Client for Triskcraft services.",
   "type": "module",
-  "packageManager": "pnpm@11.15.2",
+  "packageManager": "pnpm@11.15.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {

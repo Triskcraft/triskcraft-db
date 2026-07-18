@@ -3,6 +3,14 @@ import { PrismaClient } from './generated/client.ts'
 
 export * from './generated/client.ts'
 
+export {
+  PrismaClientKnownRequestError,
+  PrismaClientUnknownRequestError,
+  PrismaClientInitializationError,
+  PrismaClientRustPanicError,
+  PrismaClientValidationError,
+} from '@prisma/client/runtime/client'
+
 export type CreatePrismaClientOptions = {
   connectionString?: string
 }
