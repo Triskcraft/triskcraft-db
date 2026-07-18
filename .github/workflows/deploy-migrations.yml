@@ -1,0 +1,51 @@
+name: Deploy database migrations
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: Type "migrate" to confirm the production migration
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-database-migrations
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    if: inputs.confirmation == 'migrate'
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Validate schema
+        run: pnpm run db:validate
+
+      - name: Show migration status
+        run: pnpm run db:migrate:status
+        continue-on-error: true
+
+      - name: Apply pending migrations
+        run: pnpm run db:migrate:deploy
+
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
