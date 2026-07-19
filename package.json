@@ -1,6 +1,6 @@
 {
   "name": "@triskcraft/db",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Schema, migrations and generated Prisma Client for Triskcraft services.",
   "type": "module",
   "packageManager": "pnpm@11.15.0",
