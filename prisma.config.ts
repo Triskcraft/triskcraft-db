@@ -11,4 +11,7 @@ export default defineConfig({
   datasource: {
     url: process.env.DATABASE_URL ?? process.env.DATABASE_PATH!,
   },
+  migrations: {
+    seed: 'node ./src/seed.ts',
+  },
 })

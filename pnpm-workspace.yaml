@@ -6,3 +6,6 @@ saveExact: true
 allowBuilds:
   '@prisma/engines': true
   prisma: true
+
+minimumReleaseAgeExclude:
+  - '@triskcraft/api-types@1.3.0'

@@ -15,6 +15,16 @@ export type CreatePrismaClientOptions = {
   connectionString?: string
 }
 
+export const STATE_KEYS = {
+  SUPER_ROLE_ID: 'super_role_id',
+  DEFAULT_ROLE_ID: 'default_role_id',
+  DEFAULT_MINECRAFT_ROLE_ID: 'default_minecraft_role_id',
+  WEBHOOK_PANEL_MESSAGE_ID: 'wh_panel_message_id',
+  ROLES_PANEL_MESSAGE_ID: 'roles_panel_message_id',
+  ROLES_PANEL_SELECTED_USER: 'roles_panel_selected_user',
+  BLOG_PANEL_MESSAGE_ID: 'blog_panel_message_id',
+} as const
+
 export function createPrismaClient(options: CreatePrismaClientOptions = {}) {
   const connectionString =
     options.connectionString ??
